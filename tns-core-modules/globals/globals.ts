@@ -121,7 +121,7 @@ if ((<any>global).__snapshot) {
     registerOnGlobalContext("fetch", "fetch");
 }
 
-if (!(<any>global).console) {
+if ((<any>global).android) {
     const consoleModule = require("console");
     (<any>global).console = new consoleModule.Console();
 }
